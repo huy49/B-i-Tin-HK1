@@ -74,6 +74,12 @@ a:not(.credit) {
     display: flex;
     justify-content: center;
     box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 999; /* để nổi lên trên */
+    
+
 }
 
 .menu > ul {
@@ -94,6 +100,7 @@ a:not(.credit) {
     font-weight: 500;
     transition: 0.25s ease;
     white-space: nowrap;
+    
 }
 
 .menu a:hover {
