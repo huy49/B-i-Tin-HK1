@@ -18,7 +18,7 @@ a:not(.credit) {
     color: black;
 }
 
-/* ---------------- HEADER ---------------- */
+
 
 .header {
     
@@ -64,23 +64,19 @@ a:not(.credit) {
 
 
 
-
-
-
-/* ---------------- MENU ---------------- */
-
 .menu {
-    background: #3a7bd5;  /* Màu xanh đậm nhẹ */
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-
     position: sticky;
     top: 0;
-    z-index: 999; /* để nổi lên trên */
-    
-
+    z-index: 999;
+    background: rgba(58, 123, 213, 0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    padding: 8px 0;
 }
+
 
 .menu > ul {
     list-style: none;
@@ -104,56 +100,77 @@ a:not(.credit) {
 }
 
 .menu a:hover {
-    background-color: white;
-    color: #5593e6;
-    border-radius: 6px;
+    background: linear-gradient(135deg, #6aa8ff, #3a7bd5);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
 }
 
-
-
-/* ---------------- DROPDOWN ---------------- */
 
 .menu ul ul {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background: #3a7bd5;
-    min-width: 170px;
-    display: none;
-
-    /* Animation dropdown */
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.25s ease;
-
-    border-radius: 8px;
+    margin-top: 10px;
+    background: rgba(58, 123, 213, 0.95);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    padding: 8px 0;
+    min-width: 170px;
+
+    display: block;             
+    opacity: 0;
+    visibility: hidden;
+    
+    transform: translateY(15px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0s linear 0.3s; 
+    
+    box-shadow: 0 5px 14px rgba(0,0,0,0.22);
+    position: absolute;
+    left: 0;
+    top: 100%;
+
 
     list-style: none;
-    margin: 0;
-    padding: 0;
+
+    z-index: 9999;
 }
+
+
+
 
 .menu ul li:hover > ul {
-    display: block;
     opacity: 1;
-    transform: translateY(0px);
+    visibility: visible;
+    transform: translateY(0);
+
+    transition-delay: 0s; 
 }
 
-.menu ul ul li a {
-    padding: 12px 16px;
+
+.menu > ul > li > a {
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: 0.25s ease;
+    border-radius: 8px;
 }
 
-.menu ul ul li a:hover {
-    background-color: white;
-    color: #5593e6;
+
+
+.menu ul ul a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    transition: 0.25s ease;
     border-radius: 6px;
 }
 
+.menu ul ul a:hover {
+    background: linear-gradient(135deg, #8dc2ff, #3a7bd5);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    transform: translateY(-2px);
+}
 
 
-/* ---------------- CONTENT ---------------- */
 
 .content-table {
     width: 100%;
@@ -183,3 +200,25 @@ a:not(.credit) {
     padding: 25px;
     vertical-align: top;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
