@@ -4,8 +4,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f5f7fb;
-    color: #222;
+    background: rgba(249, 251, 254, 0.95);
 }
 
 img {
@@ -22,7 +21,7 @@ a:not(.credit) {
 
 .header {
     
-    background-color: whitesmoke;
+    background-color: rgba(223, 224, 226, 0.95);
     align-items: center;
 }
 
@@ -165,7 +164,7 @@ a:not(.credit) {
 }
 
 .menu ul ul a:hover {
-    background: linear-gradient(135deg, #8dc2ff, #3a7bd5);
+    background: linear-gradient(135deg, rgba(151, 195, 255, 0.95), rgba(58, 123, 213, 0.95));
     box-shadow: 0 3px 10px rgba(0,0,0,0.18);
     transform: translateY(-2px);
 }
@@ -188,11 +187,11 @@ a:not(.credit) {
 
 .ad {
     width: 15%;
-    background: #d9d9d9;
+    background: rgba(217, 217, 217, 0.95);
     text-align: center;
     vertical-align: top;
     padding: 10px;
-    border-right: 1px solid #c0c0c0;
+    
 }
 
 .main-content {
